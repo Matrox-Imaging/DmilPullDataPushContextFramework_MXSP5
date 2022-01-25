@@ -33,15 +33,15 @@ void PrintHeader()
    MosPrintf(MIL_TEXT("[EXAMPLE NAME]\n"));
    MosPrintf(MIL_TEXT("Uploader\n\n"));
    MosPrintf(MIL_TEXT("[SYNOPSIS]\n"));
-   MosPrintf(MIL_TEXT("This program demonstrates how to update a content\n"));
-   MosPrintf(MIL_TEXT("onto remote systems using destributed MIL.\n\n"));
+   MosPrintf(MIL_TEXT("This program demonstrates how to update a context\n"));
+   MosPrintf(MIL_TEXT("onto remote systems using distributed MIL.\n\n"));
    MosPrintf(MIL_TEXT("[MODULES USED]\n"));
    MosPrintf(MIL_TEXT("Application, system, classification, buffer.\n\n"));
 
    // Instrcution for the definiations.
    MosPrintf(MIL_TEXT("In this application:\n")
       MIL_TEXT("  LOCAL_CONTEXT_PATH defines the path to the updated context on the client.\n")
-      MIL_TEXT("  REMOTE_SYSTEM_NUMBER defines the number of the remote systems(servers).\n")
+      MIL_TEXT("  REMOTE_SYSTEM_NUMBER defines the number of the remote system(server).\n")
       MIL_TEXT("  REMOTE_SYSTEM_DESCRIPTOR[] defines the IP addresses of the remote systems.\n")
       MIL_TEXT("  REMOTE_SYSTEM_DIR[] defines the paths to the updated contexts on the remote systems.\n"));
 
@@ -72,7 +72,7 @@ int MosMain(void)
       if(MilRemoteApplication == 0)
          {
          MosPrintf(MIL_TEXT("Cannot connect to %s\n"), REMOTE_SYSTEM_DESCRIPTOR[i].c_str());
-         MosPrintf(MIL_TEXT("Make sure the Distributed MIL server process is started on the remote host.\n"));
+         MosPrintf(MIL_TEXT("Make sure the distributed MIL server process is started on the remote host.\n"));
          MosPrintf(MIL_TEXT("Read the description of the application on the server side for more information.\n\n"));
          }
       else
